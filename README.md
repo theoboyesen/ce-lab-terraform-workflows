@@ -1,37 +1,24 @@
 # Lab M4.10 - Terraform Git Workflows
 
-**Course:** Cloud Engineering Bootcamp - Week 4
-**Estimated Time:** 60-75 minutes
+## Workflow
+1. Create feature branch
+2. Make infrastructure changes
+3. Push and open PR
+4. GitHub Actions runs format, validate, plan
+5. Review plan output in PR comment
+6. Merge to main
 
-## 🎯 Objectives
+## CI/CD Pipeline
+- **Format check** — ensures consistent code style
+- **Validate** — catches syntax errors
+- **Plan** — shows proposed changes on PRs
 
-- Implement Git workflows for Terraform
-- Set up GitHub Actions CI/CD
-- Publish module to GitHub
-- Create pull request workflow
-- Apply best practices
-
-## 📁 Repository Structure
-
-```
-ce-lab-terraform-workflows/
-├── README.md
-├── .github/
-│   ├── workflows/
-│   │   └── terraform.yml
-│   ├── pull_request_template.md
-│   └── CODEOWNERS
+## Repository Structure
+\`\`\`
+├── .github/workflows/terraform.yml
+├── .github/pull_request_template.md
 ├── .gitignore
-├── .pre-commit-config.yaml
 ├── main.tf
-├── workflows-documentation.md
-└── screenshots/
-```
-
-## ✅ Grading (100pts)
-
-- Git workflow: 20pts
-- GitHub Actions: 25pts
-- Module publishing: 20pts
-- Best practices: 20pts
-- Documentation: 15pts
+├── variables.tf
+└── outputs.tf
+\`\`\`
